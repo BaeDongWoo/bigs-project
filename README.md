@@ -2,6 +2,12 @@
 
 React를 활용한 게시판 프로젝트 입니다.
 
+## 배포주소
+
+```base
+https://bigs-project.vercel.app
+```
+
 ## 사용 기술
 
 > 프론트엔드
