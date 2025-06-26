@@ -1,12 +1,12 @@
 // import LocalStorage from '@/utils/localStorage';
 import axios from 'axios';
 import { jwtDecode } from 'jwt-decode';
-import { useNavigate } from 'react-router-dom';
 import { userStore } from '../store/userStore';
 import { TokenPayload } from '../hooks/useAuth';
 
+const baseUrl = process.env.REACT_APP_API_BASE_URL;
 export const Instance = axios.create({
-  baseURL: 'https://front-mission.bigs.or.kr',
+  baseURL: baseUrl,
   headers: {
     Accept: 'application/json',
   },
@@ -35,7 +35,7 @@ Instance.interceptors.response.use(
       try {
         const res = await axios.post(
           //재발급 요청
-          'https://front-mission.bigs.or.kr/auth/refresh',
+          `${baseUrl}/auth/refresh`,
           {
             refreshToken: refreshToken,
           }

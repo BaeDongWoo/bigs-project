@@ -17,7 +17,7 @@ const CATEGORY_MAP = {
 export const BoardDetail = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
-  const baseUrl = 'https://front-mission.bigs.or.kr';
+  const baseUrl = process.env.REACT_APP_API_BASE_URL;
   const { data, isLoading } = useGetBoard(Number(id));
   const deleteMutate = useDeleteBoard();
   const handleEdit = () => {

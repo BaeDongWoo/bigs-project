@@ -27,13 +27,13 @@ export const BoardForm = ({
   const [category, setCategory] = useState(initialValues.category);
   const [imageFile, setImageFile] = useState<File | null>(null);
   const navigate = useNavigate();
-  const BASE_URL = 'https://front-mission.bigs.or.kr';
+  const baseUrl = process.env.REACT_APP_API_BASE_URL;
   const [previewUrl, setPreviewUrl] = useState(() =>
     // 수정작성 시 baseUrl추가
     initialValues.imageUrl?.startsWith('http')
       ? initialValues.imageUrl
       : initialValues.imageUrl
-      ? `${BASE_URL}${initialValues.imageUrl}`
+      ? `${baseUrl}${initialValues.imageUrl}`
       : ''
   );
 
