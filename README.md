@@ -56,6 +56,14 @@ React를 활용한 게시판 프로젝트 입니다.
 
 ## 프로젝트 실행 방법
 
+1. `.env` 파일을 프로젝트 루트에 만들고 아래 내용을 참고해 채워주세요
+
+```bash
+REACT_APP_API_BASE_URL=https://front-mission.bigs.or.kr
+```
+
+2. dependencies 설치 및 실행
+
 ```bash
 npm install
 npm start
