@@ -39,8 +39,10 @@ https://bigs-project.vercel.app
 - [x] 반응형 디자인
 
   - 미디어 쿼리를 사용해 '1024px','768px'별로 간단하게 대응 가능하도록 구현했습니다.
+     
 
-  ```bash
+ 
+ ```bash
   api 요청시 interceptors를 통해 헤더에 토큰을 주입하고, 응답에 따라 토큰을 재발급 또는 재로그인을 요청하도록 구현하였습니다.
 
   accessToken만료 -> reFreshToken으로 재발급요청 -> reFreshToken만료 -> 로그인 재요청
